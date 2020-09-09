@@ -16,12 +16,17 @@ class XyloPhoneApp extends StatelessWidget {
     return Expanded(
       child: SizedBox(
         width: width,
-        child: FlatButton(
-          onPressed: (){
-            playSound(soundNumber);
-          },
-          child: null,
-          color: color,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Card(
+            child: FlatButton(
+              color: color,
+              onPressed: (){
+                playSound(soundNumber);
+              },
+            child: null,
+            ),
+          ),
         ),
       ),
     );
@@ -40,6 +45,7 @@ class XyloPhoneApp extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
                   'Tap any key and see what happens!',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 25.0,
                     fontWeight: FontWeight.bold,
